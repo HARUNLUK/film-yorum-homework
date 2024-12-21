@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  eslint: {
-    ignoreDuringBuilds: true,
+  experimental: {
+    appDir: true, // if using the app directory
   },
-  images: { unoptimized: true },
+  // Remove or comment out the `output` property:
+  // output: 'export',
 };
 
-// CommonJS export
 module.exports = nextConfig;
