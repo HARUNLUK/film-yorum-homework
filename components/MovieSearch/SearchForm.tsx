@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { Search } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Search } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 interface SearchFormProps {
   movieName: string;
@@ -11,7 +11,12 @@ interface SearchFormProps {
   isLoading: boolean;
 }
 
-export function SearchForm({ movieName, onMovieNameChange, onSubmit, isLoading }: SearchFormProps) {
+export function SearchForm({
+  movieName,
+  onMovieNameChange,
+  onSubmit,
+  isLoading,
+}: SearchFormProps) {
   return (
     <form onSubmit={onSubmit} className="flex gap-4">
       <Input
@@ -22,11 +27,11 @@ export function SearchForm({ movieName, onMovieNameChange, onSubmit, isLoading }
       />
       <Button type="submit" disabled={isLoading}>
         {isLoading ? (
-          "Aranıyor..."
+          "Yorumlanıyor..."
         ) : (
           <>
             <Search className="mr-2 h-4 w-4" />
-            Ara
+            Sor
           </>
         )}
       </Button>
